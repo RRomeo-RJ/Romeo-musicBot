@@ -309,7 +309,7 @@ async def update_(client, message, _):
         await response.edit(
             f"{nrs.text}\n\n𝐁𝐨𝐭 𝐔𝐩𝐝𝐚𝐭𝐞𝐝 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 ! 𝐍𝐨𝐰 𝐖𝐚𝐢𝐭 𝐅𝐨𝐫 𝐅𝐞𝐰 𝐌𝐢𝐧𝐬 𝐅𝐨𝐫 𝐍𝐞𝐰 𝐔𝐩𝐝𝐚𝐭𝐞𝐬"
         )
-        os.system("pip3 install -r Installer")
+        os.system("pip3 install -r requirements.txt")
         os.system(f"kill -9 {os.getpid()} && python3 -m Romeo")
         exit()
 
