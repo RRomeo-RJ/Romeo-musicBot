@@ -185,4 +185,4 @@ HELP_13 = """👤**<u>TRUTH DARE FUNCTION:</u>**
 
 /trutheng - take truth in English
 
-/truthhin - take truth in Hindi
+/truthhin - take truth in Hindi."""
