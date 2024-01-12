@@ -5,7 +5,7 @@ from Romeo.core.userbot import Userbot
 from Romeo.misc import dbb, heroku
 from Romeo.logging import LOGGER
 
-git = {}
+git()
 
 
 dirr()
