@@ -12,11 +12,11 @@ def help_pannel(_, START: Union[bool, int] = None):
     second = [
         InlineKeyboardButton(
             # text=_["BACK_BUTTON"],
-            text="🏠 𝐔𝐩𝐝𝐚𝐭𝐞𝐬 🏠",
+            text="𝐔𝐩𝐝𝐚𝐭𝐞𝐬",
             url=f"https://t.me/RomeoBot_op",
         ),
         InlineKeyboardButton(
-            text="𝐂𝐫𝐞𝐚𝐭𝐨𝐫",
+            text="𝐒𝐮𝐩𝐩𝐨𝐫𝐭",
             url=f"t.me/Romeo_op",
         ),
         InlineKeyboardButton(
@@ -50,8 +50,8 @@ def help_pannel(_, START: Union[bool, int] = None):
                     callback_data="help_callback hb12",
                 ),
                 InlineKeyboardButton(
-                    text="𝐄𝐱𝐭𝐫𝐚",
-                    callback_data="help_callback hb5",
+                    text="𝐓𝐫𝐮𝐭𝐡 𝐃𝐚𝐫𝐞",
+                    callback_data="help_callback hb13",
                 ),
             ],
             [
