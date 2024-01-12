@@ -4,7 +4,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from config import BANNED_USERS, MUSIC_BOT_NAME, PING_IMG_URL
-from strings import get_command
+from helper import get_command
 from Romeo import app
 from Romeo.core.call import rj
 from Romeo.utils import bot_sys_stats
