@@ -10,7 +10,7 @@ from Romeo.core.call import rj
 from Romeo.utils import bot_sys_stats
 from Romeo.utils.decorators.language import language
 import random
-from Romeo.data import DE, DE, TE, TH 
+from Romeo.data import DE, DH, TE, TH 
 
 
 @app.on_message(
