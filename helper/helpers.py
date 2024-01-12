@@ -167,7 +167,7 @@ HELP_11 = """😅**<u> started with bot</u>**
 
 /settings - Get a complete group's settings with inline buttons.
 
-/sudolist - Check Sudo Users of Bikash Aditya Player Bot"""
+/sudolist - Check Sudo Users of RomeomusicBot"""
 
 HELP_12 = """👤**<u>GBAN FUNCTION:</u>**
 
@@ -176,3 +176,13 @@ HELP_12 = """👤**<u>GBAN FUNCTION:</u>**
 /ungban [Username or Reply to a user] - Remove a user from Bot's gbanned List and allow him for using your bot
 
 /gbannedusers - Check Gbanned Users Lists."""
+
+HELP_13 = """👤**<u>TRUTH DARE FUNCTION:</u>**
+
+/dareeng - take dare in English
+
+/darehin - take dare in Hindi 
+
+/trutheng - take truth in English
+
+/truthhin - take truth in Hindi
