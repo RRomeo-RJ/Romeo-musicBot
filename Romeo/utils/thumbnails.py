@@ -10,13 +10,9 @@ from youtubesearchpython.__future__ import VideosSearch
 
 from config import MUSIC_BOT_NAME, YOUTUBE_IMG_URL
 
+themes = ["blue", "red", "pink", "purple"]
+colors = ["white", "black", "red", "orange", "yellow", "green", "cyan", "azure", "blue", "violet", "magenta", "pink"]
 
-themes = [
-    "red",
-    "blue",
-    "pink",
-    "purple",
-]
 
 def changeImageSize(maxWidth, maxHeight, image):
     widthRatio = maxWidth / image.size[0]
@@ -66,6 +62,7 @@ async def gen_thumb(videoid, user_id):
                     await f.close()
 
         images = random.choice(themes)
+        border = random.choice(colors)
         image1 = Image.open(f"cache/thumb{videoid}.png")
         image2 = Image.open(f"helper/rj/{images}.png")
         image3 = changeImageSize(1280, 720, image1)
@@ -73,12 +70,15 @@ async def gen_thumb(videoid, user_id):
         image5 = image3.convert("RGBA")
         image6 = image4.convert("RGBA")
         Image.alpha_composite(image5, image6).save("cache/temp.png")
-        img = Image.open("cache/temp.png")
+        logo = Image.open("cache/temp.png")
+        img = ImageOps.expand(logo, border=10, fill=f"{border}")
         draw = ImageDraw.Draw(img)
-        font = ImageFont.truetype("helper/rj/font.otf", 32)
-        draw.text((190, 530), f"Title: {title[:50]} ...", (255, 255, 255), font=font)
-        draw.text((190, 570), f"Duration: {duration}", (255, 255, 255), font=font)
-        draw.text((190, 610), f"Views: {views}", (255, 255, 255), font=font)
+        font = ImageFont.truetype("helper/rj/font.otf", 55)
+        font2 = ImageFont.truetype("helper/rj/font.otf", 35)
+        draw.text((20, 555), f"Title: {title[:50]} ...", (255, 255, 255), font=font)
+        draw.text((20, 615), f"Duration: {duration}", (255, 255, 255), font=font)
+        draw.text((20, 675), f"Views: {views}", (255, 255, 255), font=font)
+        draw.text((10, 10), f"RJ•MUSIC", (255, 255, 255), font=font2)
         try:
             os.remove(f"cache/thumb{videoid}.png")
             os.remove(f"cache/temp.png")
@@ -131,6 +131,7 @@ async def gen_qthumb(videoid, user_id):
                     await f.close()
 
         images = random.choice(themes)
+        border = random.choice(colors)
         image1 = Image.open(f"cache/thumb{videoid}.png")
         image2 = Image.open(f"helper/rj/{images}.png")
         image3 = changeImageSize(1280, 720, image1)
@@ -138,12 +139,15 @@ async def gen_qthumb(videoid, user_id):
         image5 = image3.convert("RGBA")
         image6 = image4.convert("RGBA")
         Image.alpha_composite(image5, image6).save("cache/temp.png")
-        img = Image.open("cache/temp.png")
+        logo = Image.open("cache/temp.png")
+        img = ImageOps.expand(logo, border=10, fill=f"{border}")
         draw = ImageDraw.Draw(img)
-        font = ImageFont.truetype("helper/rj/font.otf", 32)
-        draw.text((190, 530), f"Title: {title[:50]} ...", (255, 255, 255), font=font)
-        draw.text((190, 570), f"Duration: {duration}", (255, 255, 255), font=font)
-        draw.text((190, 610), f"Views: {views}", (255, 255, 255), font=font)
+        font = ImageFont.truetype("helper/rj/font.otf", 55)
+        font2 = ImageFont.truetype("helper/rj/font.otf", 35)
+        draw.text((20, 555), f"Title: {title[:50]} ...", (255, 255, 255), font=font)
+        draw.text((20, 615), f"Duration: {duration}", (255, 255, 255), font=font)
+        draw.text((20, 675), f"Views: {views}", (255, 255, 255), font=font)
+        draw.text((10, 10), f"RJ•MUSIC", (255, 255, 255), font=font2)
         try:
             os.remove(f"cache/thumb{videoid}.png")
             os.remove(f"cache/temp.png")
@@ -153,4 +157,3 @@ async def gen_qthumb(videoid, user_id):
         return f"cache/{videoid}.png"
     except Exception:
         return YOUTUBE_IMG_URL
-
