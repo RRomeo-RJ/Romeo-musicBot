@@ -321,7 +321,7 @@ class Call(PyTgCalls):
                 stream,
             )
         except NoActiveGroupCall:
-            raise AssistantErr(_["call_8"])
+            raise AssistantErr(_["𝐍𝐨 𝐀𝐜𝐭𝐢𝐯𝐞 𝐯𝐢𝐝𝐞𝐨𝐜𝐡𝐚𝐭 𝐟𝐨𝐮𝐧𝐝\n\.𝐏𝐥𝐞𝐚𝐬𝐞 𝐦𝐚𝐤𝐞 𝐬𝐮𝐫𝐞 𝐲𝐨𝐮 𝐬𝐭𝐚𝐫𝐭𝐞𝐝 𝐭𝐡𝐞 𝐯𝐢𝐝𝐞𝐨𝐜𝐡𝐚𝐭."])
         except AlreadyJoinedError:
             raise AssistantErr(_["call_9"])
         except TelegramServerError:
@@ -413,7 +413,7 @@ class Call(PyTgCalls):
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "tg"
             elif "vid_" in queued:
-                mystic = await app.send_message(original_chat_id, _["call_7"])
+                mystic = await app.send_message(original_chat_id, _["call_10"])
                 try:
                     file_path, direct = await YouTube.download(
                         videoid,
