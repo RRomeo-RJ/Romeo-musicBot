@@ -12,7 +12,7 @@ motor
 OpsAi
 pillow==9.5.0
 psutil
-py-tgcalls
+py-tgcalls==0.9.7
 ntgcalls
 pykeyboard
 pyrogram==2.0.106
@@ -25,4 +25,4 @@ spotipy
 tgcrypto
 youtube-search
 youtube-search-python
-yt-dlp
+git+https://github.com/yt-dlp/yt-dlp
