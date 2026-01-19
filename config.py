@@ -9,14 +9,14 @@ from pyrogram import filters
 if os.path.exists("RJ"):
   load_dotenv("RJ")
 
-API_ID = int(getenv("API_ID" ""))
-API_HASH = getenv("API_HASH")
-BOT_TOKEN = getenv("BOT_TOKEN")
+API_ID = int(getenv("API_ID" "20534502"))
+API_HASH = getenv("API_HASH"c00610598dfaecb4e83175deb8dff28a")
+BOT_TOKEN = getenv("BOT_TOKEN"8016065215:AAFKWgvveEmkOAMApYHNwN15Z-002f_KjWo")
 COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ ! .").split())
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID"))
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "Romeo-musicBot")
-OWNER_ID = list(map(int, getenv("OWNER_ID", "").split()))
+OWNER_ID = list(map(int, getenv("OWNER_ID", "7693398963").split()))
 HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
 UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/RRomeo-RJ/Romeo-musicBot")
